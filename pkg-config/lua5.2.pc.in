@@ -3,9 +3,9 @@ major_version=5.2
 version=5.2.2
 lib_name_include=lua5.2
 
-lib_name=lua${major_version}
-libdir=${prefix}/lib
-includedir=${prefix}/include
+lib_name=lua5.2
+libdir=@CMAKE_INSTALL_PREFIX@/lib
+includedir=@CMAKE_INSTALL_PREFIX@/include
 
 #
 # The following are intended to be used via "pkg-config --variable".
@@ -13,12 +13,12 @@ includedir=${prefix}/include
 # Install paths for Lua modules.  For example, if a package wants to install
 # Lua source modules to the /usr/local tree, call pkg-config with
 # "--define-variable=prefix=/usr/local" and "--variable=INSTALL_LMOD".
-INSTALL_LMOD=${prefix}/share/lua/${major_version}
+INSTALL_LMOD=@CMAKE_INSTALL_PREFIX@/share/lua/5.2
 
 Name: Lua
 Description: Lua language engine
-Version: ${version}
+Version: 5.2.2
 Requires:
-Libs: -L${libdir} -l${lib_name}
+Libs: -L@CMAKE_INSTALL_PREFIX@/lib -llua5.2
 Libs.private: -lm -ldl
-Cflags: -I${includedir}/${lib_name_include}
+Cflags: -I@CMAKE_INSTALL_PREFIX@/include/lua5.2
