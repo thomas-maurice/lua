@@ -19,6 +19,6 @@ Name: Lua
 Description: Lua language engine
 Version: 5.2.2
 Requires:
-Libs: -L@CMAKE_INSTALL_PREFIX@/lib -llua5.2
+Libs: -L@CMAKE_INSTALL_PREFIX@/lib -llua
 Libs.private: -lm -ldl
 Cflags: -I@CMAKE_INSTALL_PREFIX@/include/lua5.2
