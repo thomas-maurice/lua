@@ -47,5 +47,5 @@ TARGET_LINK_LIBRARIES(
 )
 
 INSTALL(TARGETS luaexec luac DESTINATION bin)
-INSTALL(TARGETS lua DESTINATION lib)
+INSTALL(TARGETS lua DESTINATION lib EXPORT lua-targets)
 INSTALL(FILES lauxlib.h luaconf.h lua.h lua.hpp lualib.h DESTINATION include)

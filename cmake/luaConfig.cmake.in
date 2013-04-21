@@ -1,0 +1,9 @@
+# Find the Lua includes and library
+#
+# LUA_INCLUDE_DIR : include path
+# LUA_LIBRARIES : libraries to link with lua
+# LUA_FOUND : set to 1 if found
+
+SET(lua_FOUND 1)
+SET(lua_INCLUDE_DIRs "@LUA_INCLUDE_DIRS@")
+SET(lua_LIBRARIES "@LUA_LIBRARIES@")
