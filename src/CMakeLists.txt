@@ -1,7 +1,7 @@
 IF(WIN32)
   SET(LIBDL "")
 ELSE()
-  SET(LIBDL dl)
+  SET(LIBDL "dl")
 ENDIF()
 
 # define the lua core source files
@@ -32,6 +32,7 @@ TARGET_LINK_LIBRARIES(
 	luaexec
 	lua
 	m
+	${LIBDL}
 )
 
 # name the executable lua just like the library
